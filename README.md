@@ -1,35 +1,24 @@
-### Install
+Vue3.0 之后，生命的 ref 对象、数组都是经过代理的，那如果使用 console.log 输出的为代理后的对象，不利于在控制台查看。所以本仓库修改原始
 
-```bash
-$ yarn install
-```
-
-### 执行单元测试
-
-```bash
-$ npm run test
-```
-
-### 监听测试用例
-
-```bash
-$ npm run test:watch
-```
-
-### 发布
-
-```bash
-// 会先执行 `npm run prepublishOnly` 脚本，成功后执行 `npm publish`
-$ npm login
-$ npm publish
-```
+console，增加了 console.vlog 方法，解决此问题。
 
 ### Usage
 
-```
-import { checkPhone } from 'hx-front-utils'
+在 main.js 初始化
 
-if (checkPhone('1388888888')) {
-    console.log('This is a phone number！')
-}
+
+```
+import { initConsole } from 'console-for-proxy'
+
+initConsole()
+```
+
+在组件内使用
+
+```
+import { ref } from 'vue'
+
+const detail = ref({ name: 'console-for-proxy' })
+
+console.vlog(detail)
 ```
