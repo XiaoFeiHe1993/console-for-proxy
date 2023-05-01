@@ -1,6 +1,7 @@
 {
   "name": "console-for-proxy",
-  "version": "0.0.1",
+  "author": "hexiaofei",
+  "version": "0.0.2",
   "description": "",
   "main": "./dist/umd/console-for-proxy.min.js",
   "scripts": {
@@ -13,8 +14,7 @@
     "test:unit": "jest --coverage && npm run test:coverage",
     "test:coverage": "opener test/coverage/lcov-report/index.html"
   },
-  "keywords": [],
-  "authors": [],
+  "keywords": ["console", "vue", "proxy"],
   "license": "MIT",
   "files": [
     "dist",
