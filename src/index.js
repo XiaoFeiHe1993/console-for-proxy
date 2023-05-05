@@ -4,7 +4,9 @@ function toRaw(observed) {
 }
 
 (function() {
-  console.vlog = function() {
+  const _logFn = console.log
+
+  console.log = function() {
     if (arguments?.length > 0) {
       const result = Array.from(arguments).map(item => {
         if (item?.__v_isRef) {
@@ -13,7 +15,7 @@ function toRaw(observed) {
           return toRaw(item)
         }
       })
-      console.log(...result)
+      _logFn(...result)
     }
   }
 })()
