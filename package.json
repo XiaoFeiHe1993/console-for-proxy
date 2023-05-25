@@ -1,7 +1,7 @@
 {
   "name": "console-for-proxy",
   "author": "hexiaofei",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "",
   "main": "./dist/umd/console-for-proxy.min.js",
   "scripts": {
